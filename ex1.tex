@@ -1,0 +1,326 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeXOff,Mapping=}
+  \defaultfontfeatures[\sffamily]{Ligatures=TeXOff,Mapping=}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+\setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont[BoldFont=lmmonolt10-bold.otf]{Latin Modern Mono}  % xetex/luatex font selection
+\setmathfont{XITS Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\newcommand{\stxuiver}{{\color{Blue}\fontspec{STIX Two Math} 𝕊𝕋𝕀𝕏 UI 8.0 (𝖾𝗀, 𝖿𝗁, 𝖨𝖩, 𝖦𝖧, 𝖺𝖻𝖼𝖽, 𝚃𝚢𝚙𝚎𝚛𝚠𝚛𝚒𝚝𝚎𝚛, ui)}}
+\newcommand{\stxxver}{{\fontspec{STIX2Math.otf} 𝕊𝕋𝕀𝕏 Experience 9.0 (𝖾𝗀, 𝖿𝗁, 𝖨𝖩, 𝖦𝖧, 𝖺𝖻𝖼𝖽, 𝚃𝚢𝚙𝚎𝚛𝚠𝚛𝚒𝚝𝚎𝚛, ex)}}
+\newcommand{\Stxxver}{{\fontspec{STIXMath-Regular.otf} 𝕊𝕋𝕀𝕏 Experience 8.0 (𝖾𝗀, 𝖿𝗁, 𝖨𝖩, 𝖦𝖧, 𝖺𝖻𝖼𝖽, 𝚃𝚢𝚙𝚎𝚛𝚠𝚛𝚒𝚝𝚎𝚛, ex)}}
+\newcommand{\stxtzver}{{\fontspec{STIXGeneral-Regular.otf} 𝕊𝕋𝕀𝕏 7.5 (𝖾𝗀, 𝖿𝗁, 𝖨𝖩, 𝖦𝖧, 𝖺𝖻𝖼𝖽, 𝚃𝚢𝚙𝚎𝚛𝚠𝚛𝚒𝚝𝚎𝚛, sx)}}
+\newcommand{\link}[1]{\textcolor{magenta}{\href{#1}{#1}}}
+\newcommand{\oneuisec}[1]{\section{\textsf{#1}}}
+
+\begin{document}
+
+{\fbox{{\color{Blue}\fontspec{STIX Two Math} 𝕊𝕋𝕀𝕏 UI 8.0 (𝖾𝗀, 𝖿𝗁, 𝖨𝖩, 𝖦𝖧, 𝖺𝖻𝖼𝖽, 𝚃𝚢𝚙𝚎𝚛𝚠𝚛𝚒𝚝𝚎𝚛, ui)}\fontspec{STIX Two Math}\ ⏶}}\\
+\begin{tabular}{|l|}
+\hline
+$\checkmark$ \stxuiver\\
+\hline
+${\color{white}\checkmark}$ \stxxver\\
+\hline
+${\color{white}\checkmark}$ \Stxxver\\
+\hline
+${\color{white}\checkmark}$ \stxtzver\\\hline
+\end{tabular}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1300}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0900}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0900}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.3000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.3500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+{\bf \sffamily USV}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+{\bf \sffamily Text}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+{\bf \sffamily Math}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+{\bf \sffamily Macro (\AmS-\TeX)}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+{\bf \sffamily Category}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+{\bf \sffamily Description}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+U+0021 & {\fontspec{STIXGeneral-Regular.otf} \char"0021} & $!$ & \texttt{\textbackslash{}exclam} & \texttt{mathclose} &
+exclamation mark \\
+U+0021 & {\fontspec{STIXGeneral-Regular.otf} \char"0021} & $!$ & & \texttt{mathclose} &
+factorial \\
+U+0022 & {\fontspec{STIXGeneral-Regular.otf} \char"0022} & $"$ & \texttt{\textbackslash{}textquotedbl} & &
+quotation mark \\
+U+0023 & {\fontspec{STIXGeneral-Regular.otf} \char"0023} & $\mathoctothorpe$ & \texttt{\textbackslash{}\#} & \texttt{mathord} &
+number sign \\
+U+0024 & {\fontspec{STIXGeneral-Regular.otf} \char"0024} & $\mathdollar$ & \texttt{\textbackslash{}textdollar} &
+\texttt{mathord} & dollar sign \\
+U+0025 & {\fontspec{STIXGeneral-Regular.otf} \char"0025} & $\mathpercent$ & \texttt{\textbackslash{}\%} &
+\texttt{mathord} & percent sign \\
+U+0026 & {\fontspec{STIXGeneral-Regular.otf} \char"0026} & $\mathampersand$ & \texttt{\textbackslash{}\&} &
+\texttt{mathord} & ampersand \\
+U+0027 & {\fontspec{STIXGeneral-Regular.otf} \char"0027} & ($'$) &  &
+\texttt{mathord} & apostrophe \\
+U+0028 & {\fontspec{STIXGeneral-Regular.otf} \char"0028} & $($ & \texttt{\textbackslash{}lparen} &
+\texttt{mathopen} & left parenthesis \\
+U+0028$_{d1}$ & {\fontspec{STIXSizeOneSym-Regular.otf} \char"0028} & $\big($ & \texttt{\textbackslash{}lparen} &
+\texttt{mathopen} & left parenthesis \\
+U+0028$_{d2}$ & {\fontspec{STIXSizeTwoSym-Regular.otf} \char"0028} & $\Big($ & \texttt{\textbackslash{}lparen} &
+\texttt{mathopen} & left parenthesis \\
+U+0028$_{d3}$ & {\fontspec{STIXSizeThreeSym-Regular.otf} \char"0028} & $\bigg($ & \texttt{\textbackslash{}lparen} &
+\texttt{mathopen} & left parenthesis \\
+U+0028$_{d4}$ & {\fontspec{STIXSizeFourSym-Regular.otf} \char"0028} & $\Bigg($ & \texttt{\textbackslash{}lparen} &
+\texttt{mathopen} & left parenthesis \\
+U+0029 & {\fontspec{STIXGeneral-Regular.otf} \char"0029} & $)$ & \texttt{\textbackslash{}rparen} &
+\texttt{mathclose} & right parenthesis \\
+U+0029$_{d1}$ & {\fontspec{STIXSizeOneSym-Regular.otf} \char"0029} & $\big)$ & \texttt{\textbackslash{}rparen} &
+\texttt{mathclose} & right parenthesis \\
+U+0029$_{d2}$ & {\fontspec{STIXSizeTwoSym-Regular.otf} \char"0029} & $\Big)$ & \texttt{\textbackslash{}rparen} &
+\texttt{mathclose} & right parenthesis \\
+U+0029$_{d3}$ & {\fontspec{STIXSizeThreeSym-Regular.otf} \char"0029} & $\bigg)$ & \texttt{\textbackslash{}rparen} &
+\texttt{mathclose} & right parenthesis \\
+U+0029$_{d4}$ & {\fontspec{STIXSizeFourSym-Regular.otf} \char"0029} & $\Bigg)$ & \texttt{\textbackslash{}rparen} &
+\texttt{mathclose} & right parenthesis \\
+U+002A & {\fontspec{STIXGeneral-Regular.otf} \char"002A} & ($*$) &  &
+\texttt{mathrel} & \texttt{/ast} B: asterisk [high; not \texttt{/ast} B:] \\
+U+002B & {\fontspec{STIXGeneral-Regular.otf} \char"002B} & $+$ & \texttt{\textbackslash{}plus} &
+\texttt{mathbin} & plus sign B: \\
+U+002C & {\fontspec{STIXGeneral-Regular.otf} \char"002C} & $,$ &  &
+\texttt{mathpunct} & comma \\
+U+002D & {\fontspec{STIXGeneral-Regular.otf} \char"002D} & ($-$) &  &
+\texttt{mathbin} & hyphen-minus \\
+U+002E & {\fontspec{STIXGeneral-Regular.otf} \char"002E} & $.$ &  &
+\texttt{mathord} & full stop, period \\
+U+002F & {\fontspec{STIXGeneral-Regular.otf} \char"002F} & $/$ &  &
+\texttt{mathord} & solidus \\
+U+002F & {\fontspec{STIXGeneral-Regular.otf} \char"002F} & $/$ & \texttt{\textbackslash{}textslash} &
+\texttt{mathord} & slash (phonetic symbol) \\
+U+002F$_{d1}$ & {\fontspec{STIXSizeOneSym-Regular.otf} \char"002F} & $\big/$ &  &
+\texttt{mathord} & solidus \\
+U+002F$_{d2}$ & {\fontspec{STIXSizeTwoSym-Regular.otf} \char"002F} & $\Big/$ &  &
+\texttt{mathord} & solidus \\
+U+002F$_{d3}$ & {\fontspec{STIXSizeThreeSym-Regular.otf} \char"002F} & $\bigg/$ &  &
+\texttt{mathord} & solidus \\
+U+002F$_{d4}$ & {\fontspec{STIXSizeFourSym-Regular.otf} \char"002F} & $\Bigg/$ &  &
+\texttt{mathord} & solidus \\
+U+0030 & {\fontspec{STIXGeneral-Regular.otf} \char"0030} & $0$ &  &
+\texttt{mathord} & digit 0 \\
+U+0031 & {\fontspec{STIXGeneral-Regular.otf} \char"0031} & $1$ &  &
+\texttt{mathord} & digit 1 \\
+U+0032 & {\fontspec{STIXGeneral-Regular.otf} \char"0032} & $2$ &  &
+\texttt{mathord} & digit 2 \\
+U+0033 & {\fontspec{STIXGeneral-Regular.otf} \char"0033} & $3$ &  &
+\texttt{mathord} & digit 3 \\
+U+0034 & {\fontspec{STIXGeneral-Regular.otf} \char"0034} & $4$ &  &
+\texttt{mathord} & digit 4 \\
+U+0035 & {\fontspec{STIXGeneral-Regular.otf} \char"0035} & $5$ &  &
+\texttt{mathord} & digit 5 \\
+U+0036 & {\fontspec{STIXGeneral-Regular.otf} \char"0036} & $6$ &  &
+\texttt{mathord} & digit 6 \\
+U+0037 & {\fontspec{STIXGeneral-Regular.otf} \char"0037} & $7$ &  &
+\texttt{mathord} & digit 7 \\
+U+0038 & {\fontspec{STIXGeneral-Regular.otf} \char"0038} & $8$ &  &
+\texttt{mathord} & digit 8 \\
+U+0039 & {\fontspec{STIXGeneral-Regular.otf} \char"0039} & $9$ &  &
+\texttt{mathord} & digit 9 \\
+U+003A & {\fontspec{STIXGeneral-Regular.otf} \char"003A} & ($:$) &  &
+\texttt{mathrel} & colon \\
+U+003B & {\fontspec{STIXGeneral-Regular.otf} \char"003B} & $;$ & \texttt{\textbackslash{}semicolon} &
+\texttt{mathpunct} & semicolon P: \\
+U+003C & {\fontspec{STIXGeneral-Regular.otf} \char"003C} & $<$ & \texttt{\textbackslash{}less} &
+\texttt{mathrel} & less-than sign R: \\
+U+003D & {\fontspec{STIXGeneral-Regular.otf} \char"003D} & $=$ & \texttt{\textbackslash{}equal} &
+\texttt{mathrel} & equals sign R: \\
+U+003E & {\fontspec{STIXGeneral-Regular.otf} \char"003E} & $>$ & \texttt{\textbackslash{}greater} &
+\texttt{mathrel} & greater-than sign R: \\
+U+003F & {\fontspec{STIXGeneral-Regular.otf} \char"003F} & $?$ &  &
+\texttt{mathord} & question mark \\
+U+0040 & {\fontspec{STIXGeneral-Regular.otf} \char"0040} & $@$ & \texttt{\textbackslash{}textatsign} &
+\texttt{mathord} & commercial at \\
+U+0041 & {\fontspec{STIXGeneral-Regular.otf} \char"0041} & ($A$) &  &
+\texttt{mathalpha} & Latin capital letter A \\
+U+0042 & {\fontspec{STIXGeneral-Regular.otf} \char"0042} & ($B$) &  &
+\texttt{mathalpha} & Latin capital letter B \\
+U+0043 & {\fontspec{STIXGeneral-Regular.otf} \char"0043} & ($C$) &  &
+\texttt{mathalpha} & Latin capital letter C \\
+U+0044 & {\fontspec{STIXGeneral-Regular.otf} \char"0044} & ($D$) &  &
+\texttt{mathalpha} & Latin capital letter D \\
+U+0045 & {\fontspec{STIXGeneral-Regular.otf} \char"0045} & ($E$) &  &
+\texttt{mathalpha} & Latin capital letter E \\
+U+0046 & {\fontspec{STIXGeneral-Regular.otf} \char"0046} & ($F$) &  &
+\texttt{mathalpha} & Latin capital letter F \\
+U+0047 & {\fontspec{STIXGeneral-Regular.otf} \char"0047} & ($G$) &  &
+\texttt{mathalpha} & Latin capital letter G \\
+U+0048 & {\fontspec{STIXGeneral-Regular.otf} \char"0048} & ($H$) &  &
+\texttt{mathalpha} & Latin capital letter H \\
+U+0049 & {\fontspec{STIXGeneral-Regular.otf} \char"0049} & ($I$) &  &
+\texttt{mathalpha} & Latin capital letter I \\
+U+004A & {\fontspec{STIXGeneral-Regular.otf} \char"004A} & ($J$) &  &
+\texttt{mathalpha} & Latin capital letter J \\
+U+004B & {\fontspec{STIXGeneral-Regular.otf} \char"004B} & ($K$) &  &
+\texttt{mathalpha} & Latin capital letter K \\
+U+004C & {\fontspec{STIXGeneral-Regular.otf} \char"004C} & ($L$) &  &
+\texttt{mathalpha} & Latin capital letter L \\
+U+004D & {\fontspec{STIXGeneral-Regular.otf} \char"004D} & ($M$) &  &
+\texttt{mathalpha} & Latin capital letter M \\
+U+004D & {\fontspec{STIXGeneral-Regular.otf} \char"004D} & ($\symup M$) &  &
+\texttt{mathalpha} & capital M (phonetic symbol) \\
+U+004E & {\fontspec{STIXGeneral-Regular.otf} \char"004E} & ($N$) &  &
+\texttt{mathalpha} & Latin capital letter N \\
+U+004F & {\fontspec{STIXGeneral-Regular.otf} \char"004F} & ($O$) &  &
+\texttt{mathalpha} & Latin capital letter O \\
+U+0050 & {\fontspec{STIXGeneral-Regular.otf} \char"0050} & ($P$) &  &
+\texttt{mathalpha} & Latin capital letter P \\
+U+0051 & {\fontspec{STIXGeneral-Regular.otf} \char"0051} & ($Q$) &  &
+\texttt{mathalpha} & Latin capital letter Q \\
+U+0052 & {\fontspec{STIXGeneral-Regular.otf} \char"0052} & ($R$) &  &
+\texttt{mathalpha} & Latin capital letter R \\
+U+0053 & {\fontspec{STIXGeneral-Regular.otf} \char"0053} & ($S$) &  &
+\texttt{mathalpha} & Latin capital letter S \\
+U+0054 & {\fontspec{STIXGeneral-Regular.otf} \char"0054} & ($T$) &  &
+\texttt{mathalpha} & Latin capital letter T \\
+U+0055 & {\fontspec{STIXGeneral-Regular.otf} \char"0055} & ($U$) &  &
+\texttt{mathalpha} & Latin capital letter U \\
+U+0056 & {\fontspec{STIXGeneral-Regular.otf} \char"0056} & ($V$) &  &
+\texttt{mathalpha} & Latin capital letter V \\
+U+0057 & {\fontspec{STIXGeneral-Regular.otf} \char"0057} & ($W$) &  &
+\texttt{mathalpha} & Latin capital letter W \\
+U+0058 & {\fontspec{STIXGeneral-Regular.otf} \char"0058} & ($X$) &  &
+\texttt{mathalpha} & Latin capital letter X \\
+U+0059 & {\fontspec{STIXGeneral-Regular.otf} \char"0059} & ($Y$) &  &
+\texttt{mathalpha} & Latin capital letter Y \\
+U+005A & {\fontspec{STIXGeneral-Regular.otf} \char"005A} & ($Z$) &  &
+\texttt{mathalpha} & Latin capital letter Z \\
+U+005B & {\fontspec{STIXGeneral-Regular.otf} \char"005B} & $[$ & \texttt{\textbackslash{}lbrack} &
+\texttt{mathopen} & left square bracket \\
+U+005B$_{d1}$ & {\fontspec{STIXSizeOneSym-Regular.otf} \char"005B} & $\big[$ & \texttt{\textbackslash{}lbrack} &
+\texttt{mathopen} & left square bracket \\
+U+005B$_{d2}$ & {\fontspec{STIXSizeTwoSym-Regular.otf} \char"005B} & $\Big[$ & \texttt{\textbackslash{}lbrack} &
+\texttt{mathopen} & left square bracket \\
+U+005B$_{d3}$ & {\fontspec{STIXSizeThreeSym-Regular.otf} \char"005B} & $\bigg[$ & \texttt{\textbackslash{}lbrack} &
+\texttt{mathopen} & left square bracket \\
+U+005B$_{d4}$ & {\fontspec{STIXSizeFourSym-Regular.otf} \char"005B} & $\Bigg[$ & \texttt{\textbackslash{}lbrack} &
+\texttt{mathopen} & left square bracket \\
+U+005C & {\fontspec{STIXGeneral-Regular.otf} \char"005C} & $\backslash$ & \texttt{\textbackslash{}backslash} &
+\texttt{mathord} & reverse solidus \\
+\end{longtable}\footnote{Sources: \texttt{\link{https://www.ams.org/STIX/bnb/stix-tbl.ascii-2006-10-20}}, \texttt{\link{https://us.mirrors.cicku.me/ctan/macros/unicodetex/latex/unicode-math/unimath-symbols.pdf}}, \texttt{\link{https://yaytext.com/}}}\footnote{Some results may be incorrect.}
+{\fontspec[UprightFont=STIXGeneral-Regular.otf, ItalicFont=STIXGeneral-Italic.otf, BoldFont=STIXGeneral-Bold.otf, BoldItalicFont=STIXGeneral-BoldItalic.otf]{STIXGeneral-Regular.otf}
+\oneuisec{Programs \& Websites}
+I used YayText to convert normal text into \emph{various} styles.\\
+Examples:\\
+\begin{itemize}\item
+Typerwriter\ {\char"2192}\ {𝐓𝐲𝐩𝐞𝐫𝐰𝐫𝐢𝐭𝐞𝐫} (\textit{\textbf{bold} serif})\item
+Typerwriter\ {\char"2192}\ {𝑇𝑦𝑝𝑒𝑟𝑤𝑟𝑖𝑡𝑒𝑟} (\textit{\emph{italic} serif})\item
+Typerwriter\ {\char"2192}\ {𝑻𝒚𝒑𝒆𝒓𝒘𝒓𝒊𝒕𝒆𝒓} (\textit{\emph{\textbf{bold} italic} serif})\item
+Typerwriter\ {\char"2192}\ {𝗧𝘆𝗽𝗲𝗿𝘄𝗿𝗶𝘁𝗲𝗿} (\textit{\textsf{\textbf{bold} sans}})\item
+Typerwriter\ {\char"2192}\ {𝘛𝘺𝘱𝘦𝘳𝘸𝘳𝘪𝘵𝘦𝘳} (\textit{\textsf{\emph{italic} sans}})\item
+Typerwriter\ {\char"2192}\ {𝙏𝙮𝙥𝙚𝙧𝙬𝙧𝙞𝙩𝙚𝙧} (\textit{\textsf{\emph{\textbf{bold} italic} sans}})\item
+Typerwriter\ {\char"2192}\ {𝐓y𝐩e𝐫w𝐫i𝐭e𝐫} (\textit{alternate \textbf{bold}})\item
+Typerwriter\ {\char"2192}\ {𝑇y𝑝e𝑟w𝑟i𝑡e𝑟} (\textit{alternate \emph{italic}})\item
+Typerwriter\ {\char"2192}\ {𝑻𝙮𝒑𝙚𝒓𝙬𝒓𝙞𝒕𝙚𝒓} (\textit{\textbf{bold} with alternate \emph{italic}})\item
+Typerwriter\ {\char"2192}\ {𝑇𝘺𝑝𝘦𝑟𝘸𝑟𝘪𝑡𝘦𝑟} (\textit{\emph{italic} switch \textsf{serifs}})\item
+Typerwriter\ {\char"2192}\ {𝒯𝓎𝓅ℯ𝓇𝓌𝓇𝒾𝓉ℯ𝓇} (\textit{cursive script})\item
+Typerwriter\ {\char"2192}\ {𝒯𝔂𝓅𝓮𝓇𝔀𝓇𝓲𝓉𝓮𝓇} (\textit{cursive script with alternating \textbf{bold}})\item
+Typerwriter\ {\char"2192}\ {𝓣𝔂𝓹𝓮𝓻𝔀𝓻𝓲𝓽𝓮𝓻} (\textit{\textbf{bold} cursive script})\item
+Typerwriter\ {\char"2192}\ {T̵y̵p̵e̵r̵w̵r̵i̵t̵e̵r̵} (\textit{short strikethrough})\item
+Typerwriter\ {\char"2192}\ {T̶y̶p̶e̶r̶w̶r̶i̶t̶e̶r̶} (\textit{long strikethrough})
+\end{itemize}}\ \\\ \\\ \\
+Here's how the website \texttt{yaytext.com} would be like:\\\ \\\ \\\ \\
+{\fontspec[UprightFont=STIXGeneral-Regular.otf, ItalicFont=STIXGeneral-Italic.otf, BoldFont=STIXGeneral-Bold.otf, BoldItalicFont=STIXGeneral-BoldItalic.otf]{STIXGeneral-Regular.otf}
+\begin{flushright}
+\begin{tabular}{ | m{20em} | }\hline \begin{flushleft}Search text styles, emojis, etc.\end{flushleft}\\ \hline\end{tabular}
+\end{flushright}
+{\Huge YayText}
+{\Large\begin{flushleft}Super cool unicode text magic. Use s̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶, 𝐛𝐨𝐥𝐝, 𝒊𝒕𝒂𝒍𝒊𝒄𝒔, and {\fontspec{Yu Gothic}🅜}{\fontspec{Yu Gothic}🅞}{\fontspec{Yu Gothic}🅡}{\fontspec{Yu Gothic}🅔} {\fontspec{Yu Gothic}🄲}{\fontspec{Yu Gothic}🅁}{\fontspec{Yu Gothic}🄰}{\fontspec{Yu Gothic}🅉}{\fontspec{Yu Gothic}🅈} ʷ{\fontspec{Segoe UI}lͤ}{\fontspec{Segoe UI}oͥ}{\fontspec{Segoe UI}oͬ}{\fontspec{Segoe UI}kͩ}ing fonts on Facebook, Twitter, and everywhere else.\end{flushleft}}
+Your text: \begin{tabular}{ | m{20em} | }\hline \begin{flushleft}Hello text string my old friend.\end{flushleft}\\ \hline\end{tabular}\\
+\begin{tabular}{m{10em} m{15em} r}
+\underline{Bold (serif)}: & 𝐇𝐞𝐥𝐥𝐨 𝐭𝐞𝐱𝐭 𝐬𝐭𝐫𝐢𝐧𝐠 𝐦𝐲 𝐨𝐥𝐝 𝐟𝐫𝐢𝐞𝐧𝐝. & \fbox{Preview} \fbox{Copy} \fbox{Tweet}\\
+\underline{Italic (serif)}: & 𝐻𝑒𝑙𝑙𝑜 𝑡𝑒𝑥𝑡 𝑠𝑡𝑟𝑖𝑛𝑔 𝑚𝑦 𝑜𝑙𝑑 𝑓𝑟𝑖𝑒𝑛𝑑. & \fbox{Preview} \fbox{Copy} \fbox{Tweet}\\
+\underline{Bold / italic (serif)}: & 𝑯𝒆𝒍𝒍𝒐 𝒕𝒆𝒙𝒕 𝒔𝒕𝒓𝒊𝒏𝒈 𝒎𝒚 𝒐𝒍𝒅 𝒇𝒓𝒊𝒆𝒏𝒅. & \fbox{Preview} \fbox{Copy} \fbox{Tweet}\\
+\underline{Bold (sans)}: & 𝗛𝗲𝗹𝗹𝗼 𝘁𝗲𝘅𝘁 𝘀𝘁𝗿𝗶𝗻𝗴 𝗺𝘆 𝗼𝗹𝗱 𝗳𝗿𝗶𝗲𝗻𝗱. & \fbox{Copy} \fbox{Tweet}\\
+\underline{Italic (sans)}: & 𝘏𝘦𝘭𝘭𝘰 𝘵𝘦𝘹𝘵 𝘴𝘵𝘳𝘪𝘯𝘨 𝘮𝘺 𝘰𝘭𝘥 𝘧𝘳𝘪𝘦𝘯𝘥. & \fbox{Copy} \fbox{Tweet}\\
+\underline{Bold / italic (sans)}: & 𝙃𝙚𝙡𝙡𝙤 𝙩𝙚𝙭𝙩 𝙨𝙩𝙧𝙞𝙣𝙜 𝙢𝙮 𝙤𝙡𝙙 𝙛𝙧𝙞𝙚𝙣𝙙. & \fbox{Copy} \fbox{Tweet}\\
+\underline{Bold w/ Alternating Italic}: & 𝙃𝒆𝙡𝒍𝙤 𝙩𝒆𝙭𝒕 𝒔𝙩𝒓𝙞𝒏𝙜 𝙢𝒚 𝒐𝙡𝒅 𝒇𝙧𝒊𝙚𝒏𝙙. & \fbox{Copy} \fbox{Tweet}\\
+\underline{Italic Switch Serifs}: & 𝘏𝑒𝘭𝑙𝘰 𝘵𝑒𝘹𝑡 𝑠𝘵𝑟𝘪𝑛𝘨 𝘮𝑦 𝑜𝘭𝑑 𝑓𝘳𝑖𝘦𝑛𝘥. & \fbox{Copy} \fbox{Tweet}\\
+\underline{Alternating Bold}: & H𝐞l𝐥o t𝐞x𝐭 𝐬t𝐫i𝐧g m𝐲 𝐨l𝐝 𝐟r𝐢e𝐧d. & \fbox{Copy} \fbox{Tweet}\\
+\underline{Alternating Italic}: & H𝑒l𝑙o t𝑒x𝑡 𝑠t𝑟i𝑛g m𝑦 𝑜l𝑑 𝑓r𝑖e𝑛d. & \fbox{Copy} \fbox{Tweet}\\
+\underline{Double-struck}: & ℍ𝕖𝕝𝕝𝕠 𝕥𝕖𝕩𝕥 𝕤𝕥𝕣𝕚𝕟𝕘 𝕞𝕪 𝕠𝕝𝕕 𝕗𝕣𝕚𝕖𝕟𝕕. & \fbox{Preview} \fbox{Copy} \fbox{Tweet}\\
+\underline{Weird Double-Struck}: & \begin{flushleft}⧦ⅇǁǁ☉ ╬ⅇ⨳╬ 𝕤╬ℾⅈℼ{\fontspec{Segoe UI Historic}𓉛} ⩕ℽ ☉ǁⅆ ⨎ℾⅈⅇℼⅆ.\end{flushleft} & \fbox{Copy} \fbox{Tweet}\\
+\underline{Alternating Weirdness}\newline\underline{Double-Struck}: & ⧦𝕖ǁ𝕝☉ ╬𝕖⨳𝕥 𝕤╬𝕣ⅈ𝕟{\fontspec{Segoe UI Historic}𓉛} ⩕𝕪 𝕠ǁ𝕕 𝕗ℾ𝕚ⅇ𝕟ⅆ. & \fbox{Copy} \fbox{Tweet}\\
+\underline{Monospace}: & 𝙷𝚎𝚕𝚕𝚘 𝚝𝚎𝚡𝚝 𝚜𝚝𝚛𝚒𝚗𝚐 𝚖𝚢 𝚘𝚕𝚍 𝚏𝚛𝚒𝚎𝚗𝚍. & \fbox{Copy} \fbox{Tweet}\\
+\underline{Sans Serif}: & 𝖧𝖾𝗅𝗅𝗈 𝗍𝖾𝗑𝗍 𝗌𝗍𝗋𝗂𝗇𝗀 𝗆𝗒 𝗈𝗅𝖽 𝖿𝗋𝗂𝖾𝗇𝖽. & \fbox{Copy} \fbox{Tweet}\\
+&\( \unicodecdots \)&\\
+\underline{Green hearts}: & Hello{\fontspec{Noto Emoji}💚}text{\fontspec{Noto Emoji}💚}string{\fontspec{Noto Emoji}💚}my{\fontspec{Noto Emoji}💚}old{\fontspec{Noto Emoji}💚}friend. & \fbox{Copy} \fbox{Tweet}\\
+&\( \unicodecdots \)&\\
+\underline{Air quotes}: & \begin{flushleft}{\fontspec{Noto Emoji}✌️}Hello{\fontspec{Noto Emoji}✌️} {\fontspec{Noto Emoji}✌️}text{\fontspec{Noto Emoji}✌️} {\fontspec{Noto Emoji}✌️}string{\fontspec{Noto Emoji}✌️} {\fontspec{Noto Emoji}✌️}my{\fontspec{Noto Emoji}✌️} {\fontspec{Noto Emoji}✌️}old{\fontspec{Noto Emoji}✌️} {\fontspec{Noto Emoji}✌️}friend.{\fontspec{Noto Emoji}✌️}\end{flushleft} & \fbox{Copy} \fbox{Tweet}\\
+\underline{Classified}: & \begin{flushleft}█████ ████ ██████ ██ ███ ███████\end{flushleft} &\fbox{Preview} \fbox{Copy} \fbox{Tweet}\\
+\end{tabular}
+\begin{flushleft}
+{\small We'd love to hear from you. You can find us at \underline{twitter.com/yaytext} and \underline{facebook.com/yaytext}. Let us know how you're liking YayText. If you have questions, please ask. Happy to help. Here's our \underline{\href{https://yaytext.com/privacy-policy/}{privacy policy}}. Built by \underline{@varga} © Yay Okay LLC 2025.}
+\end{flushleft}
+}
+% Hello text string my old friend.
+\end{document}
